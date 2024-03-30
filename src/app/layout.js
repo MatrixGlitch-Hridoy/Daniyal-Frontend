@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Overlay from "@/components/Overlay";
 import Scroll from "@/components/Scroll";
+import Copyright from "@/components/Copyright";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,21 +25,11 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         {children}
-        <div>
-          <div className="bg-footer relative">
-            <Scroll />
-            <Footer />
-          </div>
-          <div className="container mx-auto relative">
-            <Overlay />
-            <div className="px-4 mt-5 md:mt-0 md:p-4 flex items-center justify-between bg-white flex-wrap gap-4 text-center text-xs md:text-base">
-              <p>
-                Copyright 2022 USA Underwriters | Privacy Policy | Terms of Use
-              </p>
-              <p>( Built by Neutrix - Powered by Neutrix Systems )</p>
-            </div>
-          </div>
+        <div className="bg-footer relative">
+          <Scroll />
+          <Footer />
         </div>
+        <Copyright />
       </body>
     </html>
   );
