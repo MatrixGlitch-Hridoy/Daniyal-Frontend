@@ -14,7 +14,7 @@ const BottomBanner = () => {
       />
 
       {/* Card div */}
-      <div className="block md:absolute left-20 right-5 bottom-20  bg-primary rounded-lg p-5 space-y-8 text-white md:w-2/5">
+      <div className="block md:absolute left-20 right-5 bottom-20  bg-primary rounded p-5 space-y-8 text-white md:w-2/5">
         <h1 className="text-xl font-bold">
           Obtain cost-effective same-day insurance coverage quickly.
         </h1>

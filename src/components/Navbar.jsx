@@ -20,7 +20,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className="md:flex items-center justify-between">
+      <nav className="md:flex items-center justify-between  py-4">
         <div className="flex items-center">
           <div className="flex flex-1 justify-center">
             <Logo />

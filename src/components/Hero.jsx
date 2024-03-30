@@ -11,7 +11,7 @@ const HeroItem = () => {
     <div className="bg-primary rounded-md mt-5 p-5 md:p-0">
       <div className="flex items-center justify-around">
         <div className="text-white md:w-2/4 space-y-6">
-          <h1 className="uppercase text-5xl font-medium">
+          <h1 className="uppercase text-3xl md:text-5xl font-medium">
             Get Affordable, Same-Day Coverage In No Time
           </h1>
           <p>

@@ -2,25 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
+import frame from "/public/Frame.png";
+import Image from "next/image";
+import { cardItems } from "@/data/data";
 
 const Card = () => {
-  const cardItems = [
-    {
-      id: 1,
-      heading: "Heading",
-      des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibuquisquam dignissimos at voluptate animi cumque, dicta ea commodi eius quas",
-    },
-    {
-      id: 2,
-      heading: "Heading",
-      des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibuquisquam dignissimos at voluptate animi cumque, dicta ea commodi eius quas",
-    },
-    {
-      id: 3,
-      heading: "Heading",
-      des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibuquisquam dignissimos at voluptate animi cumque, dicta ea commodi eius quas",
-    },
-  ];
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -61,8 +47,11 @@ const Card = () => {
     <div className="my-5 grid md:grid-cols-3 gap-4">
       {cardItems.map((cardItem, index) => {
         return (
-          <div key={cardItem.id} className="border rounded p-8">
-            <h1>{cardItem.heading}</h1>
+          <div key={cardItem.id} className="border rounded p-8 space-y-5">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-200">
+              <Image src={frame} alt="i" />
+            </div>
+            <h1 className="font-bold text-xl">{cardItem.heading}</h1>
             <p>{cardItem.des}</p>
           </div>
         );
