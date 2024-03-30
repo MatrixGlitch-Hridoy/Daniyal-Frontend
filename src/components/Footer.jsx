@@ -44,7 +44,7 @@ const Footer = () => {
               <div
                 className={`${
                   activeIndices.includes(index)
-                    ? "block bg-[#111928] p-5 rounded-md"
+                    ? "block bg-[#111928] md:bg-none p-5 rounded-md"
                     : "hidden"
                 } md:block`}
               >
