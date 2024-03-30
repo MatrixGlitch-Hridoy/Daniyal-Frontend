@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-dots{
+    button::before{
+        font-size: 1rem !important;
+        color: #C81E1E !important;
+    }
+}
+
