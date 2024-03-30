@@ -43,7 +43,9 @@ const Footer = () => {
 
               <div
                 className={`${
-                  activeIndices.includes(index) ? "block" : "hidden"
+                  activeIndices.includes(index)
+                    ? "block bg-[#111928] p-5 rounded-md"
+                    : "hidden"
                 } md:block`}
               >
                 {footerItem.des.map((data, i) => {
