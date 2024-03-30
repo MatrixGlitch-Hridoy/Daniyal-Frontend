@@ -61,7 +61,7 @@ const Hero = () => {
   var settings = {
     dots: true,
     dotsClass: "slick-dots custom-dots",
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
