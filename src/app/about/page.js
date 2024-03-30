@@ -3,9 +3,11 @@ import { IoIosArrowForward } from "react-icons/io";
 import about from "/public/about.png";
 import Image from "next/image";
 import Card from "@/components/Card";
+import Overlay from "@/components/Overlay";
 const About = () => {
   return (
-    <div className="mt-5 p-3 md:p-0 container mx-auto">
+    <div className="mt-5 p-3 md:p-0 container mx-auto relative">
+      <Overlay classname="md:hidden block" />
       <h1 className="text-3xl text-center font-semibold">About Us</h1>
       <div className="flex items-center justify-center gap-3 mt-3">
         <p>

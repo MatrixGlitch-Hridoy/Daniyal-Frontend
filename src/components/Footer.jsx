@@ -7,6 +7,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { footerItems } from "@/data/data";
+import Overlay from "./Overlay";
 
 const Footer = () => {
   const [activeIndices, setActiveIndices] = useState([]);
@@ -20,7 +21,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto relative px-5 md:p-0">
+      <Overlay />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10  text-white mt-10 py-10">
         {footerItems.map((footerItem, index) => {
           return (
@@ -29,7 +31,7 @@ const Footer = () => {
                 className="flex items-center justify-between"
                 onClick={() => onItemClick(index)}
               >
-                <h1 className="text-lg">{footerItem.heading}</h1>
+                <h1 className="text-base md:text-lg">{footerItem.heading}</h1>
                 <p className="md:hidden">
                   {activeIndices.includes(index) ? (
                     <IoIosArrowUp />

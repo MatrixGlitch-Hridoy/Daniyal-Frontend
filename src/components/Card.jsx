@@ -34,7 +34,10 @@ const Card = () => {
       <Slider {...settings}>
         {cardItems.map((cardItem, index) => {
           return (
-            <div key={cardItem.id} className="border rounded p-8">
+            <div key={cardItem.id} className="border rounded-xl p-8 space-y-3">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-200">
+                <Image src={frame} alt="i" />
+              </div>
               <h1>{cardItem.heading}</h1>
               <p>{cardItem.des}</p>
             </div>
@@ -47,7 +50,7 @@ const Card = () => {
     <div className="my-5 grid md:grid-cols-3 gap-4">
       {cardItems.map((cardItem, index) => {
         return (
-          <div key={cardItem.id} className="border rounded p-8 space-y-5">
+          <div key={cardItem.id} className="border rounded-xl p-8 space-y-5">
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-200">
               <Image src={frame} alt="i" />
             </div>

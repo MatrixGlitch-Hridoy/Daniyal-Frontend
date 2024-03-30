@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Overlay from "@/components/Overlay";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +18,24 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="border-b-2">
-          <div className="container mx-auto ">
+          <div className="container mx-auto">
             <Navbar />
           </div>
         </div>
-
         {children}
-        <div className="bg-footer">
-          <Footer />
+        <div>
+          <div className="bg-footer ">
+            <Footer />
+          </div>
+          <div className="container mx-auto relative">
+            <Overlay />
+            <div className="px-4 mt-5 md:mt-0 md:p-4 flex items-center justify-between bg-white flex-wrap gap-4 text-center text-xs md:text-base">
+              <p>
+                Copyright 2022 USA Underwriters | Privacy Policy | Terms of Use
+              </p>
+              <p>( Built by Neutrix - Powered by Neutrix Systems )</p>
+            </div>
+          </div>
         </div>
       </body>
     </html>
