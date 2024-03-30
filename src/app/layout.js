@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Overlay from "@/components/Overlay";
+import Scroll from "@/components/Scroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,8 @@ export default function RootLayout({ children }) {
         </div>
         {children}
         <div>
-          <div className="bg-footer ">
+          <div className="bg-footer relative">
+            <Scroll />
             <Footer />
           </div>
           <div className="container mx-auto relative">

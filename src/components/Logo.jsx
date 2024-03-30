@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import logo from "/public/logo.svg";
+import Link from "next/link";
 
 const Logo = (props) => {
-  return <Image priority src={logo} alt="logo" />;
+  return (
+    <Link href={"/"}>
+      <Image priority src={logo} alt="logo" />
+    </Link>
+  );
 };
 
 export default Logo;
